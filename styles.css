@@ -1,0 +1,149 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+  
+.canvas {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #B5EAEA;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+}
+
+.piplup-head {
+    position: relative;
+    background: #5993ce;
+    height: 24vmin;
+    width: 26vmin;
+    border-radius: 50%;
+    margin-top: 10vmin;
+}
+  
+.piplup-head::after {
+    content: "";
+    position: absolute;
+    background: white;
+    height: 13vmin;
+    width: 10vmin;
+    border-radius: 49% 51% 46% 54% / 78% 96% 4% 22%; 
+    top: 5vmin;
+    left: 0.2vmin;
+}
+  
+.piplup-head::before {
+    content: "";
+    position: absolute;
+    background: white;
+    height: 13vmin;
+    width: 12vmin;
+    border-radius: 49% 51% 46% 54% / 78% 96% 4% 22%; 
+    top: 5vmin;
+    left: 13.9vmin; 
+    transform: scalex(-1);
+    z-index: 1;
+}
+  
+.piplup-face {
+    position: relative;
+    background: transparent;
+    width: 25.7vmin;
+    height: 10vmin; 
+    border-radius: 50%;
+    border-bottom: 9vmin solid white;  
+    top: 5vmin;
+    left: 0.2vmin;
+}
+  
+.piplup-face::before {
+    content: "";
+    position: absolute; 
+    width: 0;
+    height: 0;
+    border-left: 6vmin solid transparent;
+    border-right: 6vmin solid transparent; 
+    border-top: 10vmin solid #aedef7; 
+    top: 3vmin;
+    left: 6vmin;
+}
+  
+.piplup-face::after {
+    content: "";
+    position: absolute;
+  
+    width: 0;
+    height: 0;
+    border-left: 3vmin solid transparent;
+    border-right: 2vmin solid transparent; 
+    border-top: 2vmin solid #5993ce;
+    top: 3vmin;
+    left: 7vmin;
+}
+  
+.beak {
+    position: relative;
+    width: 0;
+    height: 0;
+    border-left: 1.7vmin solid transparent;
+    border-right: 2.1vmin solid transparent; 
+    border-top: 2vmin solid #5993ce;
+    top: 3vmin;
+    left: 12vmin;
+    z-index: 1;
+}
+  
+.beak::before {
+    content: "";
+    position: absolute;
+    background: #f6d672;
+    height: 7vmin;
+    width: 6vmin;
+    border-radius: 50%; 
+    left: -5vmin;
+    top: 3vmin;
+}
+  
+.beak::after {
+    content: "";
+    position: absolute;
+    background: transparent;
+    height: 2vmin;
+    width: 5.8vmin;
+    border-radius: 90%;
+    border-bottom: 0.3vmin solid black;  
+    top: 6vmin;
+    left: -4.9vmin;
+}
+  
+.eyes {
+    position: relative;
+    height: 6vmin;
+    width: 4vmin;
+    background: #13163f;
+    border-radius: 50%;
+    top: 3vmin;
+    left: 2.8vmin; 
+    box-shadow: 14.3vmin 0 #13163f;
+    z-index: 1;
+    animation: blink 2s infinite;
+}
+
+@keyframes blink {
+    0% {transform: scale(1, 0.1);}
+    100% {transform: scale(1, 1);}
+}
+  
+.eyes::after {
+    content: "";
+    position: absolute;
+    background: white;
+    height: 2vmin;
+    width: 2vmin;
+    border-radius: 49% 51% 46% 54% / 78% 81% 19% 22%;
+    left: 1vmin;
+    top: 0.5vmin;
+    box-shadow: 14.3vmin 0 white;
+}
